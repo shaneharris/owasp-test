@@ -5,9 +5,9 @@ var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
 var fs = require('fs');
-app.use(express.static(__dirname + '/web-root-root/'));
+app.use(express.static(__dirname + '/web-root/'));
 app.get('/', function(req, res,next) {
-	res.sendFile(__dirname + '/web-root-root/index.html');
+	res.sendFile(__dirname + '/web-root/index.html');
 });
 app.get('/api',function(req,res){
 	res.json({hello:'world'});
